@@ -41,12 +41,18 @@ const AddUser = () => {
     //     // console.log(res.data);
     //   })
     // )
-    useEffect(() => {
-        axios
-          .get("https://fieldx-api.salesx-staging.xyz/api/v1/users")
-          .then(response => (setloading(response.data)));
-          console.log(testloading);
-      }, []);
+    // useEffect(() => {
+    //     axios
+    //       .get("https://fieldx-api.salesx-staging.xyz/api/v1/users")
+    //       .then(response => (setloading(response.data)));
+    //       console.log(testloading);
+    //   }, []);
+      useEffect(() => {
+        fetch('https://fieldx-api.salesx-staging.xyz/api/v1/users')
+            .then(res => res.json())
+            .then( data=>setloading(data.data.users[0]))
+            console.log(testloading)
+    }, [])
 
     function handleSubmit(event, errors, values) {
         event.preventDefault()
@@ -75,7 +81,7 @@ const AddUser = () => {
 
         
 
-        // dispatch(addNewUser(obj, history))
+        dispatch(addNewUser(obj, history))
        
         console.log("all values", obj)
     }
