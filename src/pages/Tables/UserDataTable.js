@@ -16,7 +16,7 @@ import Breadcrumbs from "../../components/Common/Breadcrumb"
 import "./datatables.scss"
 
 // Table data
-const products = [
+const users = [
 
 
 ];
@@ -27,7 +27,7 @@ class UserDataTable extends Component {
     this.state = {
       page: 1,
       sizePerPage: 10,
-      productData: products
+      usersData: users
     }
 
   }
@@ -68,7 +68,7 @@ class UserDataTable extends Component {
 
     const pageOptions = {
       sizePerPage: 10,
-      totalSize: products.length, // replace later with size(customers),
+      totalSize: users.length, // replace later with size(customers),
       custom: true,
     }
 
@@ -79,7 +79,7 @@ class UserDataTable extends Component {
       { text: '15', value: 15 },
       { text: '20', value: 20 },
       { text: '25', value: 25 },
-      { text: 'All', value: (this.state.productData).length }];
+      { text: 'All', value: (this.state.usersData).length }];
 
   
     // Select All Button operation
@@ -107,13 +107,13 @@ class UserDataTable extends Component {
                       pagination={paginationFactory(pageOptions)}
                       keyField='id'
                       columns={columns}
-                      data={this.state.productData}
+                      data={this.state.usersData}
                     >
                       {({ paginationProps, paginationTableProps }) => (
                         <ToolkitProvider
                           keyField='id'
                           columns={columns}
-                          data={this.state.productData}
+                          data={this.state.usersData}
                           search
                         >
                           {toolkitProps => (

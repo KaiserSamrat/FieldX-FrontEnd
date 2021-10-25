@@ -4,13 +4,13 @@ import { takeEvery, put, call, takeLatest } from "redux-saga/effects"
 import { LOGIN_USER, LOGOUT_USER, SOCIAL_LOGIN } from "./actionTypes"
 import { loginSuccess, logoutUserSuccess, apiError } from "./actions"
 
-//Include Both Helper File with needed methods
-import { getFirebaseBackend } from "../../../helpers/firebase_helper"
-import {
-  postFakeLogin,
-  postJwtLogin,
-  postSocialLogin,
-} from "../../../helpers/fakebackend_helper"
+// //Include Both Helper File with needed methods
+// import { getFirebaseBackend } from "../../../helpers/firebase_helper"
+// import {
+//   postFakeLogin,
+//   postJwtLogin,
+//   postSocialLogin,
+// } from "../../../helpers/fakebackend_helper"
 
 // const fireBaseBackend = getFirebaseBackend()
 

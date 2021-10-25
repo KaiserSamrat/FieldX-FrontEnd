@@ -5,11 +5,11 @@ import { GET_TOP_SELLING_PRODUCT, GET_EARNING_DATA } from "./actionType";
 import { apiSuccess, apiFail } from "./actions";
 
 //Include Both Helper File with needed methods
-import {
-    topSellingData as topSellingDataApi,
-    getEarningChartsData as getEarningChartsDataApi
-}
-    from "../../helpers/fakebackend_helper";
+// import {
+//     topSellingData as topSellingDataApi,
+//     getEarningChartsData as getEarningChartsDataApi
+// }
+//     from "../../helpers/fakebackend_helper";
 
 function* getSellingData({ payload: month }) {
     try {

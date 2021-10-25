@@ -15,48 +15,48 @@ import {
   DELETE_CUSTOMER,
   UPDATE_CUSTOMER
 } from "./actionTypes"
-import {
-  getCartDataFail,
-  getCartDataSuccess,
-  getCustomersFail,
-  getCustomersSuccess,
-  getOrdersFail,
-  getOrdersSuccess,
-  addOrderFail,
-  addOrderSuccess,
-  updateOrderSuccess,
-  updateOrderFail,
-  deleteOrderSuccess,
-  deleteOrderFail,
-  getProductDetailFail,
-  getProductDetailSuccess,
-  getProductsFail,
-  getProductsSuccess,
-  getShopsFail,
-  getShopsSuccess,
-  addCustomerFail,
-  addCustomerSuccess,
-  updateCustomerSuccess,
-  updateCustomerFail,
-  deleteCustomerSuccess,
-  deleteCustomerFail,
-} from "./actions"
+// import {
+//   getCartDataFail,
+//   getCartDataSuccess,
+//   getCustomersFail,
+//   getCustomersSuccess,
+//   getOrdersFail,
+//   getOrdersSuccess,
+//   addOrderFail,
+//   addOrderSuccess,
+//   updateOrderSuccess,
+//   updateOrderFail,
+//   deleteOrderSuccess,
+//   deleteOrderFail,
+//   getProductDetailFail,
+//   getProductDetailSuccess,
+//   getProductsFail,
+//   getProductsSuccess,
+//   getShopsFail,
+//   getShopsSuccess,
+//   addCustomerFail,
+//   addCustomerSuccess,
+//   updateCustomerSuccess,
+//   updateCustomerFail,
+//   deleteCustomerSuccess,
+//   deleteCustomerFail,
+// } from "./actions"
 
-//Include Both Helper File with needed methods
-import {
-  getCartData,
-  getCustomers,
-  getOrders,
-  addNewOrder,
-  updateOrder,
-  deleteOrder,
-  getProducts,
-  getShops,
-  getProductDetail,
-  addNewCustomer,
-  updateCustomer,
-  deleteCustomer
-} from "helpers/fakebackend_helper"
+// //Include Both Helper File with needed methods
+// import {
+//   getCartData,
+//   getCustomers,
+//   getOrders,
+//   addNewOrder,
+//   updateOrder,
+//   deleteOrder,
+//   getProducts,
+//   getShops,
+//   getProductDetail,
+//   addNewCustomer,
+//   updateCustomer,
+//   deleteCustomer
+// } from "helpers/fakebackend_helper"
 
 function* fetchProducts() {
   try {

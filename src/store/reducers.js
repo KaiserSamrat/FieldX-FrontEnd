@@ -35,7 +35,7 @@ const rootReducer = combineReducers({
   ecommerce,
   Dashboard,
   UserReducer,
-  DashboardSaas
+ 
 })
 
 export default rootReducer

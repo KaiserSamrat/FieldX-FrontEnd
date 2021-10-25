@@ -5,13 +5,13 @@ import accessToken from "./jwt-token-access/accessToken"
 const token = accessToken
 
 //apply base url for axios
-const API_URL = "https://fieldx-api.salesx-staging.xyz/"
+const API_URL = "https://fieldx-api.salesx-staging.xyz/api/v1/"
 
 const axiosApi = axios.create({
   baseURL: API_URL,
 })
 
-axiosApi.defaults.headers.common["Authorization"] = token
+axiosApi.defaults.headers.common.Authorization = `Bearer ${token}`
 
 axiosApi.interceptors.response.use(
   response => response,

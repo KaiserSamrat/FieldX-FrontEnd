@@ -1,28 +1,20 @@
-import axios from 'axios';
-import React, { Component } from "react"
+import { AvField, AvForm } from "availity-reactstrap-validation";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import MetaTags from 'react-meta-tags';
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import {
-    Card,
-    Col,
-    Container,
-    Row,
-    CardBody,
-    CardTitle,
-    FormGroup,
-    Label,
-    Button,
-    Form,
-    Input,
-
-} from "reactstrap"
-import { AvField, AvForm } from "availity-reactstrap-validation"
-import { useDispatch, useSelector } from "react-redux"
-import { useHistory } from "react-router-dom"
-import { useEffect, useState } from "react"
-import { addNewUser } from "../../store/users/action"
-
+    Card, CardBody,
+    CardTitle, Col,
+    Container, FormGroup,
+    Label, Row
+} from "reactstrap";
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb"
+import Breadcrumbs from "../../components/Common/Breadcrumb";
+import { addNewUser } from "../../store/users/action";
+// import { addNewUser } from "../../store/users/actions"
+
 
 const AddUser = () => {
 
@@ -30,40 +22,18 @@ const AddUser = () => {
     const [testloading, setloading] = useState([])
     const dispatch = useDispatch()
     const history = useHistory()
-    // const { loading, usernames } = useSelector(
-    //     state => state.dropdownnamesReducer
-    //   )
+  
     const { isLoading, error } = useSelector(state => state.UserReducer)
-    // useEffect(
-    //     axios.post(``,  obj )
-    //   .then(res => {
-    //     console.log(res);
-    //     // console.log(res.data);
-    //   })
-    // )
-    // useEffect(() => {
-    //     axios
-    //       .get("https://fieldx-api.salesx-staging.xyz/api/v1/users")
-    //       .then(response => (setloading(response.data)));
-    //       console.log(testloading);
-    //   }, []);
-      useEffect(() => {
-        fetch('https://fieldx-api.salesx-staging.xyz/api/v1/users')
-            .then(res => res.json())
-            .then( data=>setloading(data.data.users[0]))
-            console.log(testloading)
-    }, [])
+    
 
-    function handleSubmit(event, errors, values) {
+    async function  handleSubmit  (event, errors, values)  {
         event.preventDefault()
         console.log(values);
         let obj = {}
         if (values.name) {
             obj.name = values.name
         }
-        // if (values.phoneNumber) {
-        //     obj.phoneNumber = values.phoneNumber
-        // }
+        
         if (values.email) {
             obj.email = values.email
         }
@@ -73,14 +43,20 @@ const AddUser = () => {
         if (values.password) {
             obj.password = values.password
         }
-        if (values.confirmPassword) {
-            obj.confirmPassword = values.confirmPassword
+        if (values.passwordConfirm) {
+            obj.passwordConfirm = values.passwordConfirm
         }
 
         console.log(obj);
 
         
+//   await axios.post(`https://fieldx-api.salesx-staging.xyz/api/v1/users`, obj).then((response => {
+//       console.log('hello');
+//       console.log(response.data);
+//   }))
 
+    //   await  axios.post('https://fieldx-api.salesx-staging.xyz/api/v1/users', obj)
+    // .then(response => console.log(response));
         dispatch(addNewUser(obj, history))
        
         console.log("all values", obj)
@@ -208,7 +184,7 @@ const AddUser = () => {
                                                 <FormGroup className="mb-3">
                                                     <Label htmlFor="formrow-confirmPassword-Input">Confirm Password</Label>
                                                     <AvField
-                                                        name='confirmPassword'
+                                                        name='passwordConfirm'
                                                         type="password"
                                                         className="form-control"
                                                         id="formrow-confirmPassword-Input"

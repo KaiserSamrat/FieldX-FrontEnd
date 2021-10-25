@@ -13,6 +13,7 @@ import {
 import { connect } from "react-redux"
 
 import UserDataTable from '../Tables/UserDataTable'
+// import UserTable from '../User/UserTable'
 
 
 class UserList extends Component {
