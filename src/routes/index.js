@@ -1,77 +1,74 @@
 import React from "react"
 import { Redirect } from "react-router-dom"
-
-// Brand Component
-import ListBrand from '../pages/OverView/ListBrand/ListBrand'
-import AnalyticsBrand from '../pages/OverView/ListBrand/AnalyticsBrand'
-
-
-
-
-// User profile
-import UserProfile from "../pages/Authentication/UserProfile"
-import UserList from '../pages/User/UserList'
-import AddUser from '../pages/User/AddUser'
-
-//Projects
-
-
-
-//Ecommerce Pages
-import EcommerceProducts from "../pages/Ecommerce/EcommerceProducts/index"
-import EcommerceProductDetail from "../pages/Ecommerce/EcommerceProducts/EcommerceProductDetail"
-import ProductList from "../pages/Ecommerce/ProductList/index"
-
-import EcommerceCart from "../pages/Ecommerce/EcommerceCart"
-import EcommerceCheckout from "../pages/Ecommerce/EcommerceCheckout"
-import EcommerceShops from "../pages/Ecommerce/EcommerceShops/index"
-import EcommerceAddProduct from "../pages/Ecommerce/EcommerceAddProduct"
-//Geo Information
-import AddGeo from '../pages/GeoInformation/AddGeo'
-import AddRoute from '../pages/GeoInformation/AddRoute'
-import AddArea from '../pages/GeoInformation/AddArea'
-import AddRegion from '../pages/GeoInformation/AddRegion'
-import AddTerritory from '../pages/GeoInformation/AddTerritory'
-import ListArea from '../pages/GeoInformation/ListArea'
-import ListRegion from '../pages/GeoInformation/ListRegion'
-import ListTerritory from '../pages/GeoInformation/ListTerritory' 
-//Store Information
-import StoreList from '../pages/StoreDetails/StoreList'
-import StoreAdd from '../pages/StoreDetails/StoreAdd'
-import StoreInfo from '../pages/StoreDetails/StoreInfo'
-
+import ForgetPwd from "../pages/Authentication/ForgetPassword"
 // Authentication related pages
 import Login from "../pages/Authentication/Login"
 import Logout from "../pages/Authentication/Logout"
 import Register from "../pages/Authentication/Register"
-import ForgetPwd from "../pages/Authentication/ForgetPassword"
-
+// User profile
+import UserProfile from "../pages/Authentication/UserProfile"
+import EmailVerification from "../pages/AuthenticationInner/auth-email-verification"
+import EmailVerification2 from "../pages/AuthenticationInner/auth-email-verification-2"
+import LockScreen from "../pages/AuthenticationInner/auth-lock-screen"
+import LockScreen2 from "../pages/AuthenticationInner/auth-lock-screen-2"
+import TwostepVerification from "../pages/AuthenticationInner/auth-two-step-verification"
+import TwostepVerification2 from "../pages/AuthenticationInner/auth-two-step-verification-2"
+import ForgetPwd1 from "../pages/AuthenticationInner/ForgetPassword"
+import ForgetPwd2 from "../pages/AuthenticationInner/ForgetPwd2"
 // Inner Authentication
 import Login1 from "../pages/AuthenticationInner/Login"
 import Login2 from "../pages/AuthenticationInner/Login2"
-import Register1 from "../pages/AuthenticationInner/Register"
-import Register2 from "../pages/AuthenticationInner/Register2"
-import Recoverpw from "../pages/AuthenticationInner/Recoverpw"
-import Recoverpw2 from "../pages/AuthenticationInner/Recoverpw2"
-import ForgetPwd1 from "../pages/AuthenticationInner/ForgetPassword"
-import ForgetPwd2 from "../pages/AuthenticationInner/ForgetPwd2"
-import LockScreen from "../pages/AuthenticationInner/auth-lock-screen"
-import LockScreen2 from "../pages/AuthenticationInner/auth-lock-screen-2"
 import ConfirmMail from "../pages/AuthenticationInner/page-confirm-mail"
 import ConfirmMail2 from "../pages/AuthenticationInner/page-confirm-mail-2"
-import EmailVerification from "../pages/AuthenticationInner/auth-email-verification"
-import EmailVerification2 from "../pages/AuthenticationInner/auth-email-verification-2"
-import TwostepVerification from "../pages/AuthenticationInner/auth-two-step-verification"
-import TwostepVerification2 from "../pages/AuthenticationInner/auth-two-step-verification-2"
-
+import Recoverpw from "../pages/AuthenticationInner/Recoverpw"
+import Recoverpw2 from "../pages/AuthenticationInner/Recoverpw2"
+import Register1 from "../pages/AuthenticationInner/Register"
+import Register2 from "../pages/AuthenticationInner/Register2"
 // Dashboard
 import Dashboard from "../pages/Dashboard/index"
-
-
-
+import EcommerceAddProduct from "../pages/Ecommerce/EcommerceAddProduct"
+import EcommerceCart from "../pages/Ecommerce/EcommerceCart"
+import EcommerceCheckout from "../pages/Ecommerce/EcommerceCheckout"
+import EcommerceProductDetail from "../pages/Ecommerce/EcommerceProducts/EcommerceProductDetail"
+//Projects
+//Ecommerce Pages
+import EcommerceProducts from "../pages/Ecommerce/EcommerceProducts/index"
+import EcommerceShops from "../pages/Ecommerce/EcommerceShops/index"
+import ProductList from "../pages/Ecommerce/ProductList/index"
+import AddArea from '../pages/GeoInformation/AddArea'
+//Geo Information
+import AddGeo from '../pages/GeoInformation/AddGeo'
+import AddRegion from '../pages/GeoInformation/AddRegion'
+import AddRoute from '../pages/GeoInformation/AddRoute'
+import AddTerritory from '../pages/GeoInformation/AddTerritory'
+import ListArea from '../pages/GeoInformation/ListArea'
+import ListRegion from '../pages/GeoInformation/ListRegion'
+import ListTerritory from '../pages/GeoInformation/ListTerritory'
+import AddOffice from '../pages/Office/AddOffice'
 //Office
 import InfoOffice from '../pages/Office/InfoOffice'
-import AddOffice from '../pages/Office/AddOffice'
+import AnalyticsBrand from '../pages/OverView/ListBrand/AnalyticsBrand'
+// Brand Component
+import ListBrand from '../pages/OverView/ListBrand/ListBrand'
+import StoreAdd from '../pages/StoreDetails/StoreAdd'
+import StoreInfo from '../pages/StoreDetails/StoreInfo'
+//Store Information
+import StoreList from '../pages/StoreDetails/StoreList'
+import AddUser from '../pages/User/AddUser'
+import UserList from '../pages/User/UserList'
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

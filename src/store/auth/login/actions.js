@@ -1,10 +1,8 @@
 import {
-  LOGIN_USER,
-  LOGIN_SUCCESS,
-  LOGOUT_USER,
+  LOGIN_SUCCESS, LOGIN_USER,
+  LOGIN_USER_ERROR, LOGOUT_USER,
   LOGOUT_USER_SUCCESS,
-  API_ERROR,
-  SOCIAL_LOGIN,
+  SOCIAL_LOGIN
 } from "./actionTypes"
 
 export const loginUser = (user, history) => {
@@ -14,10 +12,10 @@ export const loginUser = (user, history) => {
   }
 }
 
-export const loginSuccess = user => {
+export const loginSuccess = (username, token, email, userrole) => {
   return {
     type: LOGIN_SUCCESS,
-    payload: user,
+    payload: { username, token, email, userrole },
   }
 }
 
@@ -35,12 +33,10 @@ export const logoutUserSuccess = () => {
   }
 }
 
-export const apiError = error => {
-  return {
-    type: API_ERROR,
-    payload: error,
-  }
-}
+export const loginUserError = () => ({
+  type: LOGIN_USER_ERROR,
+  payload: {},
+})
 
 export const socialLogin = (data, history, type) => {
   return {

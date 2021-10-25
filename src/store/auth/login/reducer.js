@@ -1,14 +1,16 @@
+
 import {
-  LOGIN_USER,
-  LOGIN_SUCCESS,
-  LOGOUT_USER,
-  LOGOUT_USER_SUCCESS,
-  API_ERROR,
+  LOGIN_SUCCESS, LOGIN_USER, LOGIN_USER_ERROR, LOGOUT_USER,
+  LOGOUT_USER_SUCCESS
 } from "./actionTypes"
 
 const initialState = {
-  error: "",
   loading: false,
+  username: "",
+  token: "",
+  email: "",
+  userrole: "",
+  error: "",
 }
 
 const login = (state = initialState, action) => {
@@ -17,25 +19,45 @@ const login = (state = initialState, action) => {
       state = {
         ...state,
         loading: true,
+        error: "",
       }
       break
     case LOGIN_SUCCESS:
       state = {
         ...state,
+        username: action.payload.username,
+        token: action.payload.token,
+        email: action.payload.email,
+        userrole: action.payload.userrole,
+        loading: false,
+        error: "",
+      }
+      break
+    case LOGIN_USER_ERROR:
+      state = {
+        ...state,
+        username: "",
+        token: "",
+        email: "",
+        userrole: "",
         loading: false,
       }
       break
     case LOGOUT_USER:
-      state = { ...state }
+      state = {
+        ...state,
+        username: "",
+        token: "",
+        email: "",
+        userrole: "",
+      }
       break
     case LOGOUT_USER_SUCCESS:
       state = { ...state }
       break
-    case API_ERROR:
-      state = { ...state, error: action.payload, loading: false }
-      break
+
     default:
-      state = { ...state }
+      state = state
       break
   }
   return state
